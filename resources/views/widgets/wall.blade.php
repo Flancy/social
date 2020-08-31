@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-xs-4">
                     <button type="button" class="btn btn-default btn-add-image btn-sm" onclick="uploadPostImage()">
-                        <i class="fa fa-image"></i> Add Image
+                        <i class="fa fa-image"></i> Добавить изображение
                     </button>
                     <input type="file" accept="image/*" class="image-input" name="photo" onchange="previewPostImage(this)">
                 </div>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-xs-4">
                     <button type="button" class="btn btn-primary btn-submit pull-right" onclick="newPost()">
-                        Post!
+                        Опубликовать!
                     </button>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h5 class="modal-title">Likes</h5>
+                <h5 class="modal-title">Нравится</h5>
             </div>
 
             <div class="user_list">

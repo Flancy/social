@@ -20,13 +20,13 @@
 
 
                         <div class="content-page-title">
-                            Following ({{ $list->count() }})
+                            Подписчиков ({{ $list->count() }})
                         </div>
 
 
                         @if($list->count() == 0)
                             <div class="alert-message alert-message-danger">
-                                <h4>Following are not found.</h4>
+                                <h4>Нет подписчиков.</h4>
                             </div>
                         @else
                             <div class="row">
@@ -53,7 +53,7 @@
                                                                     @if($relation->following->canSeeProfile(Auth::id()))
                                                                         <small>{{ Auth::user()->distance($relation->following) }}</small>
                                                                     @else
-                                                                        <small>(Private)</small>
+                                                                        <small>(Приватный)</small>
                                                                     @endif
                                                                 </p>
                                                             </a>
@@ -82,7 +82,7 @@
             <div class="container">
                 <div class="alert-message alert-message-default">
                     <h4>{{ '@'.$user->username."'s" }} profile is private.</h4>
-                    <p>Please follow to see {{ '@'.$user->username."'s" }} profile.</p>
+                    <p>Подпишитесь что бы видеть {{ '@'.$user->username }} профиль.</p>
                 </div>
             </div>
         @endif

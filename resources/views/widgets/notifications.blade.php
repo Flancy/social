@@ -10,7 +10,7 @@
     </a>
     <ul class="dropdown-menu" role="menu">
         @if(count(sHelper::notifications()) == 0)
-            <li style="padding: 10px"><a href="javascript:;">There is no notification.</a></li>
+            <li style="padding: 10px"><a href="javascript:;">Нет оповещений.</a></li>
         @else
             @foreach(sHelper::notifications() as $notification)
                 <li>

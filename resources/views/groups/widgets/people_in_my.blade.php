@@ -1,5 +1,5 @@
 <div class="panel panel-default suggested-people">
-    <div class="panel-heading">All in {{ $city->name }}</div>
+    <div class="panel-heading">Все в {{ $city->name }}</div>
     <ul class="list-group" style="overflow-x: auto; max-height: 500px;">
         @php($i = 0)
         @foreach(Auth::user()->suggestedPeople(100000, $city->id, $group->hobby->id, true) as $user)
@@ -23,7 +23,7 @@
         @endforeach
         @if($i == 0)
             <li class="list-group-item">
-                There is only you in {{ $city->name }}
+                Здесь только вы {{ $city->name }}
             </li>
         @endif
     </ul>

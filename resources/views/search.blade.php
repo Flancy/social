@@ -8,7 +8,7 @@
 
 
                 <ul class="nav nav-pills">
-                    <li class="active"><a data-toggle="pill" href="#posts">Posts ({{ $posts->count() }})</a></li>
+                    <li class="active"><a data-toggle="pill" href="#posts">Записи ({{ $posts->count() }})</a></li>
                     <li><a data-toggle="pill" href="#users">Users ({{ $users->count() }})</a></li>
                 </ul>
 
@@ -20,7 +20,7 @@
 
 
                             <div class="alert-message alert-message-default">
-                                <h4>Not Found !</h4>
+                                <h4>Ничего не найдено!</h4>
                             </div>
 
 
@@ -44,7 +44,7 @@
 
 
                             <div class="alert-message alert-message-default">
-                                <h4>Not Found !</h4>
+                                <h4>Ничего не найдено!</h4>
                             </div>
 
 
@@ -72,7 +72,7 @@
                                                                         @if($user_p->canSeeProfile(Auth::id()))
                                                                             <small>{{ Auth::user()->distance($user_p) }}</small>
                                                                         @else
-                                                                            <small>(Private)</small>
+                                                                            <small>(Приватный)</small>
                                                                         @endif
                                                                     </p>
                                                                 </a>

@@ -10,13 +10,13 @@
             <div class="col-md-9">
 
                 <div class="content-page-title">
-                    Follower Requests ({{ $list->count() }})
+                    Подписчиков ({{ $list->count() }})
                 </div>
 
 
                 @if($list->count() == 0)
                     <div class="alert-message alert-message-danger">
-                        <h4>Follower requests are not found.</h4>
+                        <h4>Запросов в друзья нет.</h4>
                     </div>
                 @else
                     <div class="row">
@@ -43,16 +43,16 @@
                                                             @if($relation->follower->canSeeProfile(Auth::id()))
                                                                 <small>{{ Auth::user()->distance($relation->follower) }}</small>
                                                             @else
-                                                                <small>(Private)</small>
+                                                                <small>(Приватный)</small>
                                                             @endif
                                                         </p>
                                                     </a>
                                                 </div>
                                                 <div class="bottom" id="approve-buttons-{{ $relation->id }}">
-                                                    <div class="text-success approved" style="display: none"><i class="fa fa-check"></i> Successfully Approved</div>
-                                                    <div class="text-danger denied" style="display: none"><i class="fa fa-times"></i> Denied</div>
-                                                    <a href="javascript:;" class="btn btn-success approve-button btn-sm" onclick="followRequest(1, {{ $relation->id }})"><i class="fa fa-check"></i> Approve</a>
-                                                    <a href="javascript:;" class="btn btn-danger approve-button btn-sm" onclick="followRequest(2, {{ $relation->id }})"><i class="fa fa-times"></i> Deny</a>
+                                                    <div class="text-success approved" style="display: none"><i class="fa fa-check"></i> Заявки</div>
+                                                    <div class="text-danger denied" style="display: none"><i class="fa fa-times"></i> Отклонить</div>
+                                                    <a href="javascript:;" class="btn btn-success approve-button btn-sm" onclick="followRequest(1, {{ $relation->id }})"><i class="fa fa-check"></i> Подтвердить</a>
+                                                    <a href="javascript:;" class="btn btn-danger approve-button btn-sm" onclick="followRequest(2, {{ $relation->id }})"><i class="fa fa-times"></i> Заблокировать</a>
                                                 </div>
                                             </div>
                                         </div>

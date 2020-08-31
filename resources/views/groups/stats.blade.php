@@ -14,11 +14,6 @@
                     {{ $group->hobby->name }}
                 </div>
 
-
-
-
-
-
                 <div class="row">
                     <div class="col-xs-12 col-md-3 pull-right">
                         <div class="hidden-sm hidden-xs">
@@ -27,7 +22,7 @@
                     </div>
                     <div class="col-md-9">
 
-                        <a href="{{ url('/group/'.$group->id.'') }}" class="btn btn-default btn-sm"><i class="fa fa-arrow-left"></i> Back to group page</a>
+                        <a href="{{ url('/group/'.$group->id.'') }}" class="btn btn-default btn-sm"><i class="fa fa-arrow-left"></i> Вернуться</a>
 
 
 
@@ -69,9 +64,9 @@
                         <table class="table table-bordered table-striped table-hover" style="background: #fff">
                             <thead>
                                 <tr>
-                                    <th>Country Name</th>
-                                    <th>Country Code</th>
-                                    <th>Number of Users</th>
+                                    <th>Страна</th>
+                                    <th>Код страны</th>
+                                    <th>Количество людей</th>
                                 </tr>
                             </thead>
                             <tbody>

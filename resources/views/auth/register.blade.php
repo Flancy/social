@@ -2,11 +2,11 @@
     <input type="hidden" value="register" name="tab" />
     {{ csrf_field() }}
 
-    <h2>Start Connecting Millions of People!</h2>
+    <h2>Начни общаться с единомышленниками!</h2>
 
     <div class="row">
         <div class="form-group{{ old('tab') == 'register' && $errors->has('name') ? ' has-error' : '' }} col-md-12">
-            <label for="name" class="control-label">Name</label>
+            <label for="name" class="control-label">ФИО</label>
 
             <div class="form-group">
                 <div class="input-group">
@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group{{ old('tab') == 'register' && $errors->has('email') ? ' has-error' : '' }} col-md-12">
-            <label for="email" class="control-label">E-Mail Address</label>
+            <label for="email" class="control-label">E-Mail</label>
 
             <div class="form-group">
                 <div class="input-group">
@@ -45,7 +45,7 @@
         </div>
 
         <div class="form-group{{ old('tab') == 'register' && $errors->has('username') ? ' has-error' : '' }} col-md-12">
-            <label for="username" class="control-label">Username</label>
+            <label for="username" class="control-label">Логин</label>
 
             <div class="form-group">
                 <div class="input-group">
@@ -65,7 +65,7 @@
         </div>
 
         <div class="form-group{{ old('tab') == 'register' && $errors->has('password') ? ' has-error' : '' }} col-md-12">
-            <label for="password" class="control-label">Password</label>
+            <label for="password" class="control-label">Пароль</label>
 
             <div class="form-group">
                 <div class="input-group">
@@ -83,7 +83,7 @@
         </div>
 
         <div class="form-group  col-md-12">
-            <label for="password-confirm" class="control-label">Confirm Password</label>
+            <label for="password-confirm" class="control-label">Повторите пароль</label>
 
             <div class="form-group">
                 <div class="input-group">
@@ -97,7 +97,7 @@
         <div class="form-group">
             <div class="col-md-8 col-md-offset-2">
                 <button type="submit" class="btn btn-primary btn-register">
-                    Register
+                    Зарегистрироваться
                 </button>
             </div>
         </div>
