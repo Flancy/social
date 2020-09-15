@@ -3,7 +3,9 @@
  */
 
 $(function() {
-    $('.datepicker').datepicker();
+    $('.datepicker').datepicker({
+        language: 'ru'
+    });
 
     $('[data-toggle="tooltip"]').tooltip();
 

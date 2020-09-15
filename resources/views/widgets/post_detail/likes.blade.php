@@ -1,7 +1,7 @@
 @if($post->getLikeCount() == 0)
-    <div class="alert alert-danger" role="alert" style="margin: 10px;">There is no like!</div>
+    <div class="alert alert-danger" role="alert" style="margin: 10px;">Нет лайков!</div>
 @else
-    <p style="padding: 10px 10px 0 10px"><small>{{ $post->getLikeCount() }} @if($post->getLikeCount() > 1){{ 'likes' }}@else{{ 'like' }}@endif</small></p>
+    <p style="padding: 10px 10px 0 10px"><small>{{ $post->getLikeCount() }} @if($post->getLikeCount() > 1){{ 'лайков' }}@else{{ 'лайк' }}@endif</small></p>
     <ul class="list-group">
         @foreach($post->likes()->limit(2000000)->with('user')->get() as $like)
         <li class="list-group-item">

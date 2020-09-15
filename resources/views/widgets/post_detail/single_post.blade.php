@@ -13,13 +13,13 @@
         <div class="pull-right like-box">
             <a href="javascript:;" onclick="likePost({{ $post->id }})" class="like-text">
                 @if($post->checkLike($user->id))
-                    <i class="fa fa-heart"></i> <span>Unlike!</span>
+                    <i class="fa fa-heart"></i> <span>Не нравится!</span>
                 @else
-                    <i class="fa fa-heart-o"></i> <span>Like!</span>
+                    <i class="fa fa-heart-o"></i> <span>Нравится!</span>
                 @endif
             </a>
             <div class="clearfix"></div>
-            <a href="javascript:;" class="all_likes" onclick="showLikes({{ $post->id }})"><span>{{ $post->getLikeCount() }} @if($post->getLikeCount() > 1){{ 'likes' }}@else{{ 'like' }}@endif</span></a>
+            <a href="javascript:;" class="all_likes" onclick="showLikes({{ $post->id }})"><span>{{ $post->getLikeCount() }} @if($post->getLikeCount() > 1){{ 'лайков' }}@else{{ 'лайк' }}@endif</span></a>
         </div>
         <div class="clearfix"></div>
         <span>
@@ -70,10 +70,10 @@
                     </a>
                 </div>
                 <div class="media-body">
-                    <textarea class="form-control" rows="1" placeholder="Comment"></textarea>
+                    <textarea class="form-control" rows="1" placeholder="Комментарий"></textarea>
                 </div>
-                <button type="button" class="btn btn-default btn-xs pull-right" onclick="submitComment({{ $post->id }})">
-                    Submit!
+                <button type="button" class="btn btn-default btn-add-image btn-xs pull-right" onclick="submitComment({{ $post->id }})">
+                    Отправить!
                 </button>
             </form>
         </div>

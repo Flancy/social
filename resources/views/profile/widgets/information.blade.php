@@ -79,11 +79,11 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading">Хобби @if($my_profile) <a href="javascript:;" data-toggle="modal" data-target="#profileHobbies"><i>{{ 'Edit' }}</i></a> @endif</div>
+    <div class="panel-heading">Хобби @if($my_profile) <a href="javascript:;" data-toggle="modal" data-target="#profileHobbies"><i>{{ 'Изменить' }}</i></a> @endif</div>
 
     <ul class="list-group" style="max-height: 300px; overflow-x: auto">
         @if($user->hobbies()->count() == 0)
-            <li class="list-group-item">No hobby!</li>
+            <li class="list-group-item">У вас нет хобби!</li>
         @else
             @foreach($user->hobbies()->get() as $hobby)
                 <li class="list-group-item">{{ $hobby->hobby->name }}</li>
@@ -115,7 +115,7 @@
                             <div class="col-md-12">
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1"><i class="fa fa-map-marker"></i></span>
-                                    <input type="text" class="form-control location-input" readonly value="{{ $user->getAddress() }}" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control location-input" value="{{ $user->getAddress() }}" aria-describedby="basic-addon1">
                                     <input type="hidden" value="" name="map_info" class="map-info">
                                 </div>
                             </div>
@@ -129,8 +129,8 @@
                             <div class="form-group">
                                 <label>Пол</label>
                                 <select class="form-control " name="sex">
-                                    <option value="0" @if($user->sex == 0){{ 'selected' }}@endif>Male</option>
-                                    <option value="1" @if($user->sex == 1){{ 'selected' }}@endif>Female</option>
+                                    <option value="0" @if($user->sex == 0){{ 'selected' }}@endif>Мужчина</option>
+                                    <option value="1" @if($user->sex == 1){{ 'selected' }}@endif>Женщина</option>
                                 </select>
                             </div>
                         </div>

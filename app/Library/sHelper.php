@@ -20,7 +20,7 @@ class sHelper
 
     public static function followButton($following, $follower, $element, $size = ''){
 
-        if ($following  == $follower) return "This is me";
+        if ($following  == $follower) return "Это я";
 
         $relation = UserFollowing::where('following_user_id', $following)->where('follower_user_id', $follower)->get()->first();
 
@@ -32,7 +32,7 @@ class sHelper
             }
         }
 
-        return '<a href="javascript:;" class="btn btn-default follow-button '.$size.'" onclick="follow('.$following.', '.$follower.', \''.$element.'\', \''.$size.'\')"><i class="fa fa-plus-circle"></i> Follow</a>';
+        return '<a href="javascript:;" class="btn btn-default follow-button '.$size.'" onclick="follow('.$following.', '.$follower.', \''.$element.'\', \''.$size.'\')"><i class="fa fa-plus-circle"></i> Подписаться</a>';
 
     }
 
@@ -44,7 +44,7 @@ class sHelper
 
         if ($relation){
             if ($relation->allow == 1) {
-                return '<a href="javascript:;" class="btn btn-danger '.$size.'" onclick="deniedFollow('.$me.', '.$follower.', \''.$element.'\', \''.$size.'\')" data-toggle="tooltip" title="Block">
+                return '<a href="javascript:;" class="btn btn-danger '.$size.'" onclick="deniedFollow('.$me.', '.$follower.', \''.$element.'\', \''.$size.'\')" data-toggle="tooltip" title="Заблокировать">
                 <i class="fa fa-times"></i>
                 </a>';
             }
@@ -63,10 +63,10 @@ class sHelper
         $km = $miles * 1.609344;
 
         if ($km < 1){
-            return round($miles * 1609.344).' Meter';
+            return round($miles * 1609.344).' Метров';
         }
 
-        return round($km, 2).' Km';
+        return round($km, 2).' Км';
 
     }
 
@@ -101,7 +101,7 @@ class sHelper
                     $notifications[] = [
                         'url' => url('/post/'.$comment->post_id),
                         'icon' => 'fa-commenting',
-                        'text' => $user->name.' left a comment on your post.'
+                        'text' => $user->name.' оставили комментарий к Вашей записи.'
                     ];
                 }
 
@@ -114,7 +114,7 @@ class sHelper
                     $notifications[] = [
                         'url' => url('/post/'.$likne->post_id),
                         'icon' => 'fa-heart',
-                        'text' => $user->name.' liked your post.'
+                        'text' => $user->name.' Ваша запись понравилась.'
                     ];
                 }
 

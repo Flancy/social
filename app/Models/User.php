@@ -80,7 +80,7 @@ class User extends Authenticatable
         if ($w > -1) $image .= '&w='.$w;
         if ($h > -1) $image .= '&h='.$h;
         $image .= '&zc=1';
-        $image .= '&src='.$path;
+        $image .= '&src=public/'.$path;
         return url($image);
     }
 
@@ -102,8 +102,8 @@ class User extends Authenticatable
     }
 
     public function getSex(){
-        if ($this->sex == 0) return "Male";
-        return "Female";
+        if ($this->sex == 0) return "Мужчина";
+        return "Женщина";
     }
 
     public function getPhone(){

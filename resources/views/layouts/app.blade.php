@@ -20,6 +20,7 @@
     <link href="{{ asset('plugins/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/select2/dist/css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/material-kit/assets/css/material-kit.css') }}" rel="stylesheet">
     <link href="{{ asset('css/around.css') }}" rel="stylesheet">
 
     @yield('header')
@@ -128,6 +129,7 @@
 <script src="{{ asset('plugins/jquery.serializeJSON/jquery.serializejson.min.js') }}"></script>
 <script src="{{ asset('plugins/fancybox/dist/jquery.fancybox.min.js') }}"></script>
 <script src="{{ asset('plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+<script src="{{ asset('plugins/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js') }}"></script>
 <script src="{{ asset('plugins/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js') }}"></script>
 <script src="{{ asset('plugins/select2/dist/js/select2.full.min.js') }}"></script>
 <script src="//maps.google.com/maps/api/js?key=<?=config('googlemaps.key')?>"></script>
