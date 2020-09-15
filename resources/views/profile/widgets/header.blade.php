@@ -15,7 +15,7 @@
                             </div>
                             <form id="form-upload-profile-photo" enctype="multipart/form-data">
                                 <div class="change-image">
-                                    <a href="javascript:;" class="upload-button" onclick="uploadProfilePhoto()"><i class="fa fa-upload"></i> Upload Photo</a>
+                                    <a href="javascript:;" class="upload-button" onclick="uploadProfilePhoto()"><i class="fa fa-upload"></i> Загрузить изображение</a>
                                     <input type="file" accept="image/*" name="profile-photo" class="profile_photo_input">
                                 </div>
                             </form>

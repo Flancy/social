@@ -15,6 +15,7 @@
     <link href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/material-kit/assets/css/material-kit.css') }}" rel="stylesheet">
     <link href="{{ asset('css/guest.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -32,9 +33,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <a href="{{ url('/') }}" class="logo">
+            <!--<a href="{{ url('/') }}" class="logo">
                 Знаки Зодиака
-            </a>
+            </a>-->
         </div>
 
         <div class="col-md-6">
