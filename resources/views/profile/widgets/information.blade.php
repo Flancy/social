@@ -110,7 +110,7 @@
             <div class="modal-body">
                 <form id="form-profile-information">
                     <div class="form-group">
-                        <label>Location:</label>
+                        <label>Адрес:</label>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="input-group">
@@ -243,12 +243,12 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <select class="form-control" name="relation" style="width: 100%">
-                                    <option value="0">Mother</option>
-                                    <option value="1">Father</option>
-                                    <option value="2">Spouse</option>
-                                    <option value="3">Sister</option>
-                                    <option value="4">Brother</option>
-                                    <option value="5">Relative</option>
+                                    <option value="0">Мама</option>
+                                    <option value="1">Папа</option>
+                                    <option value="2">Супруг</option>
+                                    <option value="3">Сестра</option>
+                                    <option value="4">Брат</option>
+                                    <option value="5">Родственник</option>
                                 </select>
                             </div>
                         </div>

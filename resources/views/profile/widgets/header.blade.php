@@ -26,7 +26,7 @@
                     </div>
                     <div class="profile-text">
                         <h2>{{ $user->name }}</h2>
-                        <h4>{{ '@'.$user->username }}</h4>
+                        <!--<h4>{{ '@'.$user->username }}</h4>-->
                         @if($can_see)
                             <small>{{ Auth::user()->distance($user) }}</small>
                         @endif

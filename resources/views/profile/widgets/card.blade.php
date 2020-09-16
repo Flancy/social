@@ -8,7 +8,7 @@
         </div>
         <div class="info">
             <a href="{{ url('/'.$user->username) }}" class="name">{{ $user->name }}</a>
-            <a href="{{ url('/'.$user->username) }}" class="username">{{ '@'.$user->username }}</a>
+            <p class="username">{{ '<b>Знак зодиака.</b> '.$user->zodiac }}</p>
         </div>
         <div class="clearfix"></div>
     </div>

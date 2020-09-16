@@ -14,8 +14,6 @@
                     <i class="fa fa-users"></i> Группы
                 </div>
 
-
-
                 @if($groups->count() == 0)
 
                     <div class="alert-message alert-message-default">

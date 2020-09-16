@@ -12,7 +12,7 @@
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user-circle-o"></i> </span>
 
-                    <input id="name" type="text" placeholder="John Doe" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                    <input id="name" type="text" placeholder="Иван Иванов" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
                 </div>
 
@@ -40,8 +40,6 @@
                 </span>
                 @endif
             </div>
-
-
         </div>
 
         <div class="form-group{{ old('tab') == 'register' && $errors->has('username') ? ' has-error' : '' }} col-md-12">
@@ -51,7 +49,7 @@
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i> </span>
 
-                    <input id="username" type="text" class="form-control" placeholder="example" name="username" value="{{ old('username') }}" required>
+                    <input id="username" type="text" class="form-control" placeholder="ivan" name="username" value="{{ old('username') }}" required>
 
                 </div>
                 @if (old('tab') == 'register' && $errors->has('username'))
@@ -60,8 +58,37 @@
                 </span>
                 @endif
             </div>
+        </div>
 
+        <div class="form-group{{ old('tab') == 'register' && $errors->has('zodiac') ? ' has-error' : '' }} col-md-12">
+            <label for="zodiac" class="control-label">Знак зодиака</label>
 
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i> </span>
+
+                    <input id="zodiac" type="text" class="form-control" placeholder="Рыбы" name="zodiac" value="{{ old('zodiac') }}" required>
+                    <select name="zodiac" id="zodiac" class="form-control">
+                        <option value="Овен">Овен</option>
+                        <option value="Телец">Телец</option>
+                        <option value="Близнецы">Близнецы</option>
+                        <option value="Рак">Рак</option>
+                        <option value="Лев">Лев</option>
+                        <option value="Дева">Дева</option>
+                        <option value="Весы">Весы</option>
+                        <option value="Скорпион">Скорпион</option>
+                        <option value="Стрелец">Стрелец</option>
+                        <option value="Козерог">Козерог</option>
+                        <option value="Водолей">Водолей</option>
+                        <option value="Рыбы">Рыбы</option>
+                    </select>
+                </div>
+                @if (old('tab') == 'register' && $errors->has('zodiac'))
+                    <span class="help-block">
+                    <strong>{{ $errors->first('zodiac') }}</strong>
+                </span>
+                @endif
+            </div>
         </div>
 
         <div class="form-group{{ old('tab') == 'register' && $errors->has('password') ? ' has-error' : '' }} col-md-12">

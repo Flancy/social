@@ -40,7 +40,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* Header */
 .navbar-around {
-    background: #9c27b0;
+    background: #325f85;
     min-height: 61px;
     margin-bottom: 0;
     border-bottom: 0;
@@ -115,7 +115,7 @@ a, a:hover, a:active, a:visited, a:focus {
     color: #fff;
     padding: 5px 10px;
     box-sizing: border-box;
-    border-left: 1px solid #193e5e;
+    /*border-left: 1px solid #193e5e;*/
 }
 
 .navbar-around .navbar-nav li a.parent img{

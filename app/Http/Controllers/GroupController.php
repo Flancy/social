@@ -41,8 +41,10 @@ class GroupController extends Controller
         $groups = Group::join('user_hobbies', 'user_hobbies.hobby_id', '=', 'groups.hobby_id')
             ->where('user_hobbies.user_id', $user->id)->select('groups.*');
 
-        $city = $user->location->city;
-
+        /*$city = $user->location->city;
+        ПОПРАВИТЬ
+        */
+        $city = null;
 
         return view('groups.index', compact('user', 'groups', 'city'));
     }

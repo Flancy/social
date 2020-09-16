@@ -21,7 +21,7 @@ class UpdateUsersTable extends Migration
             $table->string('phone', 20)->nullable();
             $table->string('bio', 140)->nullable();
             $table->string('profile_path', 191)->nullable();
-
+            $table->string('zodiac', 191)->nullable();
         });
     }
 
