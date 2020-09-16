@@ -65,11 +65,10 @@
 
             <div class="form-group">
                 <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i> </span>
+                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-star"></i> </span>
 
-                    <input id="zodiac" type="text" class="form-control" placeholder="Рыбы" name="zodiac" value="{{ old('zodiac') }}" required>
-                    <select name="zodiac" id="zodiac" class="form-control">
-                        <option value="Овен">Овен</option>
+                    <select name="zodiac" id="zodiac" class="form-control" style="padding: 0 15px; height: 52px;">
+                        <option value="Овен" selected>Овен</option>
                         <option value="Телец">Телец</option>
                         <option value="Близнецы">Близнецы</option>
                         <option value="Рак">Рак</option>
