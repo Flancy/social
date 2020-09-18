@@ -24,6 +24,19 @@
     </div>
 </div>
 
+<div class="profile-information" style="margin-bottom: 30px;">
+    @if(!$my_profile)
+        <div class="profile-follow">
+            <div class="profile-follow-b1" style="margin-right: 10px">
+                {!! sHelper::followButton($user->id, Auth::id(), '.profile-follow-b1') !!}
+            </div>
+            <div class="profile-follow-b2">
+                {!! sHelper::deniedButton(Auth::id(), $user->id, '.denied-button-'.$user->id, 'denied-button-'.$user->id) !!}
+            </div>
+        </div>
+    @endif
+</div>
+
 <div class="profile-information">
     @if($my_profile)
         <div class="edit-button">
@@ -68,6 +81,48 @@
                 {{ $user->bio }}
             </li>
         @endif
+        @if ($user->zodiac)
+            <li class="list-group-item">
+                @switch($user->zodiac)
+                    @case('Овен')
+                        <img src="{{ asset('images/zodiacs/006-aries.png') }}" alt="" style="max-width: 17px">
+                    @break
+                    @case('Телец')
+                        <img src="{{ asset('images/zodiacs/007-taurus.png') }}" alt="" style="max-width: 17px">
+                    @break
+                    @case('Близнецы')
+                        <img src="{{ asset('images/zodiacs/003-gemini.png') }}" alt="" style="max-width: 17px">
+                    @break
+                    @case('Рак')
+                        <img src="{{ asset('images/zodiacs/005-cancer.png') }}" alt="" style="max-width: 17px">
+                    @break
+                    @case('Лев')
+                        <img src="{{ asset('images/zodiacs/012-leo.png') }}" alt="" style="max-width: 17px">
+                    @break
+                    @case('Дева')
+                        <img src="{{ asset('images/zodiacs/001-virgo.png') }}" alt="" style="max-width: 17px">
+                    @break
+                    @case('Весы')
+                        <img src="{{ asset('images/zodiacs/009-libra.png') }}" alt="" style="max-width: 17px">
+                    @break
+                    @case('Скорпион')
+                        <img src="{{ asset('images/zodiacs/008-scorpio.png') }}" alt="" style="max-width: 17px">
+                    @break
+                    @case('Стрелец')
+                        <img src="{{ asset('images/zodiacs/010-sagittarius.png') }}" alt="" style="max-width: 17px">
+                    @break
+                    @case('Водолей')
+                        <img src="{{ asset('images/zodiacs/002-aquarius.png') }}" alt="" style="max-width: 17px">
+                    @break
+                    @case('Рыбы')
+                        <img src="{{ asset('images/zodiacs/011-pisces.png') }}" alt="" style="max-width: 17px">
+                    @break
+                    @default
+                        <span>&nbsp;</span>
+                @endswitch
+                {{ $user->zodiac }}
+            </li>
+        @endif
     </ul>
 </div>
 
@@ -77,7 +132,7 @@
 
     <ul class="list-group" style="max-height: 300px; overflow-x: auto">
         @if($relationship->count() == 0 && $relationship2->count() == 0)
-            <li class="list-group-item">Не в отношениях!</li>
+            <li class="list-group-item">Не в отношениях</li>
         @endif
         @if($relationship->count() > 0)
             @foreach($relationship as $relative)
@@ -109,7 +164,7 @@
 
     <ul class="list-group" style="max-height: 300px; overflow-x: auto">
         @if($user->hobbies()->count() == 0)
-            <li class="list-group-item">У вас нет хобби!</li>
+            <li class="list-group-item">Нет хобби</li>
         @else
             @foreach($user->hobbies()->get() as $hobby)
                 <li class="list-group-item">{{ $hobby->hobby->name }}</li>

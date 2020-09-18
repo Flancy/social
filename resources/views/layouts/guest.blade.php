@@ -42,7 +42,7 @@
     </div>
 </div>
 
-<div class="container" style="position: relative; margin-top: 30px; margin-bottom: 30px;">
+<div class="container" style="position: relative; margin-top: 70px; margin-bottom: 30px;">
     <div class="row">
         <div class="col-md-6">
         </div>

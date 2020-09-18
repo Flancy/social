@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="profile" style="margin-top: 80px; position: relative;">
+    <div class="profile" style="position: relative;">
         @if ($can_see)
             <div class="container profile-main">
                 <div class="row">

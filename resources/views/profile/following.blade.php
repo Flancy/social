@@ -3,10 +3,8 @@
 @section('content')
 
     <div class="profile">
-
         @include('profile.widgets.header')
-
-
+        
         @if ($can_see)
             <div class="container profile-main">
                 <div class="row">
@@ -17,12 +15,9 @@
                         </div>
                     </div>
                     <div class="col-md-9">
-
-
                         <div class="content-page-title">
                             Подписчиков ({{ $list->count() }})
                         </div>
-
 
                         @if($list->count() == 0)
                             <div class="alert-message alert-message-danger">
@@ -30,10 +25,7 @@
                             </div>
                         @else
                             <div class="row">
-
                                 @foreach($list as $relation)
-
-
                                     <div class="col-sm-6 col-md-4">
                                         <div class="card-container">
                                             <div class="card">
@@ -67,14 +59,9 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 @endforeach
-
                             </div>
                         @endif
-
-
-
                     </div>
                 </div>
             </div>
@@ -86,7 +73,6 @@
                 </div>
             </div>
         @endif
-
     </div>
 
 @endsection

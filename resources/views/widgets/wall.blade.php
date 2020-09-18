@@ -1,36 +1,37 @@
+<h3>Стена</h3>
 <div class="clearfix"></div>
 @if($user->id == Auth::user()->id)
-<div class="panel panel-default new-post-box">
-    <div class="panel-body">
-        <form id="form-new-post">
-            <input type="hidden" name="group_id" value="{{ $wall['new_post_group_id'] }}">
-            <textarea name="content" placeholder="Напишите что-нибудь"></textarea>
-            <div class="image-area">
-                <a href="javascript:;" class="image-remove-button" onclick="removePostImage()"><i class="fa fa-times-circle"></i></a>
-                <img src="" />
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-xs-4">
-                    <button type="button" class="btn btn-default btn-add-image btn-sm" onclick="uploadPostImage()">
-                        <i class="fa fa-image"></i> Добавить изображение
-                    </button>
-                    <input type="file" accept="image/*" class="image-input" name="photo" onchange="previewPostImage(this)">
+    <div class="panel panel-default new-post-box">
+        <div class="panel-body">
+            <form id="form-new-post">
+                <input type="hidden" name="group_id" value="{{ $wall['new_post_group_id'] }}">
+                <textarea name="content" placeholder="Напишите что-нибудь"></textarea>
+                <div class="image-area">
+                    <a href="javascript:;" class="image-remove-button" onclick="removePostImage()"><i class="fa fa-times-circle"></i></a>
+                    <img src="" />
                 </div>
-                <div class="col-xs-4">
-                    <div class="loading-post">
-                        <img src="{{ asset('images/rolling.gif') }}" alt="">
+                <hr />
+                <div class="row">
+                    <div class="col-xs-4">
+                        <button type="button" class="btn btn-default btn-add-image btn-sm" onclick="uploadPostImage()">
+                            <i class="fa fa-image"></i> Добавить изображение
+                        </button>
+                        <input type="file" accept="image/*" class="image-input" name="photo" onchange="previewPostImage(this)">
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="loading-post">
+                            <img src="{{ asset('images/rolling.gif') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="button" class="btn btn-primary btn-submit pull-right" onclick="newPost()">
+                            Опубликовать!
+                        </button>
                     </div>
                 </div>
-                <div class="col-xs-4">
-                    <button type="button" class="btn btn-primary btn-submit pull-right" onclick="newPost()">
-                        Опубликовать!
-                    </button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
 @endif
 
 <div class="post-list-top-loading">
