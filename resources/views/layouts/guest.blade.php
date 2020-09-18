@@ -36,7 +36,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p class="logo-text">Найди свой знак зодиака</p>
+                <!--<p class="logo-text">Найди свой знак зодиака</p>-->
             </div>
         </div>
     </div>

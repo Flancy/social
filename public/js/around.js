@@ -36,7 +36,7 @@ function getLocation() {
         return navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
         $('#errorMessageModal').modal('show');
-        $('#errorMessageModal #errors').html("Geolocation is not supported by this browser.");
+        $('#errorMessageModal #errors').html("Геолокация не поддерживается в Вашем браузере.");
     }
 }
 
@@ -50,16 +50,16 @@ function showError(error) {
     var error_msg = null;
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            error_msg = "You denied the request for Geolocation.";
+            error_msg = "Вы запретили запрос на геолокацию.";
             break;
         case error.POSITION_UNAVAILABLE:
-            error_msg = "Location information is unavailable.";
+            error_msg = "Информация о геолокации недоступна.";
             break;
         case error.TIMEOUT:
-            error_msg = "The request to get user location timed out.";
+            error_msg = "Время на запрос геолокации вышло.";
             break;
         case error.UNKNOWN_ERROR:
-            error_msg = "An unknown error occurred.";
+            error_msg = "Неизвестная ошибка.";
             break;
     }
     $('#errorMessageModal').modal('show');
@@ -161,12 +161,12 @@ function follow(following, follower, element, size){
                 }
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Что-то произошло!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Что-то произошло!');
         }
     });
 
@@ -197,12 +197,12 @@ function followRequest(type, id){
                 }
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Что-то произошло!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Что-то произошло!');
         }
     });
 
@@ -231,12 +231,12 @@ function deniedFollow(me, follower, element, size){
                 location.reload();
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Что-то произошло!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Что-то произошло!');
         }
     });
 
@@ -268,12 +268,12 @@ function relativeRequest(type, id){
                 }
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Что-то произошло!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Что-то произошло!');
         }
     });
 
@@ -282,10 +282,10 @@ function relativeRequest(type, id){
 function removeRelation(type, id){
 
     BootstrapDialog.show({
-        title: 'Relationship Delete!',
-        message: 'Are you sure to delete ?',
+        title: 'Удаление отношений!',
+        message: 'Вы действительно хотите удалить?',
         buttons: [{
-            label: "Yes, I'm Sure!",
+            label: "Да, хочу!",
             cssClass: 'btn-danger',
             action: function(dialog) {
 
@@ -309,18 +309,18 @@ function removeRelation(type, id){
                             location.reload();
                         }else{
                             $('#errorMessageModal').modal('show');
-                            $('#errorMessageModal #errors').html('Something went wrong!');
+                            $('#errorMessageModal #errors').html('Что-то произошло!');
                         }
                     },
                     error: function(){
                         dialog.close();
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Что-то произошло!');
                     }
                 });
             }
         }, {
-            label: 'No!',
+            label: 'Нет!',
             action: function(dialog) {
                 dialog.close();
             }

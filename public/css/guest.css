@@ -145,13 +145,14 @@ input:-webkit-autofill:active {
 
 
 .banner{
-    background: rgba(11, 75, 134, 1);
+    background: rgba(11, 75, 134, 0.3);
     color: #fff;
     padding: 20px 10px;
     box-sizing: border-box;
     position: fixed;
     width: 100%;
     top: 40%;
+    height: 88px;
 }
 
 .banner .container{

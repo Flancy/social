@@ -1,4 +1,4 @@
-<h3>Стена</h3>
+<h3 style="margin-top: -35px">Стена</h3>
 <div class="clearfix"></div>
 @if($user->id == Auth::user()->id)
     <div class="panel panel-default new-post-box">
