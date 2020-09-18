@@ -61,7 +61,7 @@ input:-webkit-autofill:active {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    background: rgba(59, 105, 145, 0.8);
+    background: rgba(89, 74, 29, 0.7);
 }
 
 .tab_container label{
@@ -86,7 +86,7 @@ input:-webkit-autofill:active {
 
 
 .tab_container [id^="tab"]:checked + .head, .tab_container .head:hover {
-    background: rgba(11, 75, 134, 0.8);
+    background: rgba(89, 74, 29, 0.8);
 }
 
 
@@ -144,8 +144,16 @@ input:-webkit-autofill:active {
 }
 
 
+.btn-primary {
+    background: #a68a37 !important;
+    border-color: #594a1d !important;
+}
+.btn-primary:hover {
+    background: #806b2a !important;
+    border-color: #594a1d !important;
+}
 .banner{
-    background: rgba(11, 75, 134, 0.3);
+    background: rgba(89, 74, 29, 0.4);
     color: #fff;
     padding: 20px 10px;
     box-sizing: border-box;

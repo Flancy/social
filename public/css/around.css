@@ -29,7 +29,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* Header */
 .navbar-around {
-    background: #325f85;
+    background: #594a1d;
     min-height: 61px;
     margin-bottom: 0;
     border-bottom: 0;
@@ -38,7 +38,14 @@ a, a:hover, a:active, a:visited, a:focus {
     left: 0;
     width: 100%;
 }
-
+.btn-primary {
+    background: #a68a37 !important;
+    border-color: #594a1d !important;
+}
+.btn-primary:hover {
+    background: #806b2a !important;
+    border-color: #594a1d !important;
+}
 .navbar-around .navbar-header {
     min-height: 61px;
 }
