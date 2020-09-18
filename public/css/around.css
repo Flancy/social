@@ -38,6 +38,12 @@ a, a:hover, a:active, a:visited, a:focus {
     left: 0;
     width: 100%;
 }
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background: #a68a37 !important;
+}
+.card .cover {
+    background: #a68a37 !important;
+}
 .btn-primary {
     background: #a68a37 !important;
     border-color: #594a1d !important;
@@ -203,7 +209,7 @@ a, a:hover, a:active, a:visited, a:focus {
     bottom: 10px;
     left: 0;
     position: absolute;
-    border: 5px solid #c8d6f7;
+    border: 5px solid #a68a37;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
