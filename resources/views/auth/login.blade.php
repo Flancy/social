@@ -2,15 +2,9 @@
     <input type="hidden" value="login" name="tab" />
     {{ csrf_field() }}
 
-    <h2>Присоединяйся!</h2>
-
-
-
     <div class="row">
         <div class="form-group{{ old('tab') != 'register' && $errors->has('email') ? ' has-error' : '' }} col-md-12">
             <label for="email" class="control-label">E-Mail</label>
-
-
 
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope"></i> </span>

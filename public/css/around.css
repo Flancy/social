@@ -33,7 +33,7 @@ a, a:hover, a:active, a:visited, a:focus {
     min-height: 61px;
     margin-bottom: 0;
     border-bottom: 0;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -46,7 +46,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .navbar-around .navbar-header .navbar-brand {
     margin: 0;
     padding: 0;
-    width: 180px;
+    width: 60px;
 }
 .navbar-around .nav-item {
     line-height: 60px;

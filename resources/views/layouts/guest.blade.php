@@ -36,20 +36,18 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p class="logo-text">Знаки Зодиака</p>
+                <p class="logo-text">Найди свой знак зодиака</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container" style="position: relative">
+<div class="container" style="position: relative; margin-top: 30px; margin-bottom: 30px;">
     <div class="row">
         <div class="col-md-6">
         </div>
 
         <div class="col-md-6">
-
-
             <div class="tab_container">
                 <input id="tab1" type="radio" name="tabs" {{ old('tab') != 'register' ? 'checked' : '' }} class="radio_hidden">
                 <label for="tab1" class="head"><i class="fa fa-user"></i><span>Вход</span></label>
