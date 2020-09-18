@@ -156,14 +156,19 @@ class FollowController extends Controller
 
 
     public function pending(Request $request){
-
-
         $user = Auth::user();
 
         $list = $user->follower()->where('allow', 0)->with('follower')->get();
 
-
         return view('followers_pending', compact('user', 'list'));
     }
 
+    public function followers(){
+        $user = Auth::user();
+
+        $list = $user->follower()->where('allow', 0)->with('follower')->get();
+        $followers = $user->follower()->where('allow', 1)->with('follower')->get();
+
+        return view('followers_pending', compact('user', 'list', 'followers'));
+    }
 }

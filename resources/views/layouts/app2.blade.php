@@ -12,7 +12,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('plugins/material-kit/assets/css/material-kit.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -30,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        <img src="{{ asset('images/blizneci-white.png') }}" alt="" class="logo-img" style="max-width: 67px;">
                     </a>
                 </div>
 

@@ -1,15 +1,7 @@
 @extends('layouts.app')
 
-
 @section('content')
-
-    <div class="profile">
-
-        @include('profile.widgets.header')
-
-
-
-
+    <div class="profile" style="margin-top: 80px; position: relative;">
         @if ($can_see)
             <div class="container profile-main">
                 <div class="row">
@@ -24,12 +16,14 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        @include('profile.widgets.information')
+                        <!--@include('profile.widgets.information')-->
+                        @include('profile.widgets.zodiacs')
                     </div>
                     <div class="col-xs-12 col-md-3 pull-right">
-                        @include('profile.widgets.user_follow_counts')
+                        <!--@include('profile.widgets.user_follow_counts')-->
                         <div class="hidden-sm hidden-xs">
-                            @include('widgets.suggested_people')
+                            <!--@include('widgets.suggested_people')-->
+                            @include('profile.widgets.information')
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -40,16 +34,13 @@
         @else
             <div class="container">
                 <div class="alert-message alert-message-default">
-                    <h4>{{ '@'.$user->username."'s" }} profile is private.</h4>
+                    <h4>{{ '@'.$user->username."'s" }} профиль приватный.</h4>
                     <p>Подпишитесь чтобы видеть {{ '@'.$user->username }} профиль.</p>
                 </div>
             </div>
         @endif
     </div>
-
-
 @endsection
-
 
 @section('footer')
     <script type="text/javascript">

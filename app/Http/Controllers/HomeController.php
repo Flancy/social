@@ -29,29 +29,20 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-
         $user = Auth::user();
 
         $wall = [
             'new_post_group_id' => 0
         ];
 
-
-
-
-
         return view('home', compact('user', 'wall'));
-
-
     }
 
 
-    public function search(Request $request){
-
-
+    public function search(Request $request)
+    {
         $s = $request->input('s');
         if (empty($s)) return redirect('/');
-
 
         $user = Auth::user();
 
@@ -73,13 +64,20 @@ class HomeController extends Controller
 
         $comment_count = 2;
 
-        $users = User::where('name', 'like', '%'.$s.'%')->orWhere('username', 'like', '%'.$s.'%')->orderBy('name', 'ASC')->get();
+        if( $request->has('zodiac') ) {
+            $users = User::where('zodiac', 'like', '%'. $request->input('zodiac') .'%')->orderBy('name', 'ASC')->get();
+        } else if ( $request->has('year') ) {
+            $years = explode(',', $request->input('year'));
+
+            $users = User::where(function ($query) use ($years) {
+                foreach ($years as $year) {
+                    $query->whereYear('birthday', '=', $year, 'or');
+                }
+            })->orderBy('name', 'ASC')->get();
+        } else {
+            $users = User::where('name', 'like', '%'.$s.'%')->orWhere('username', 'like', '%'.$s.'%')->orderBy('name', 'ASC')->get();
+        }
 
         return view('search', compact('users', 'posts', 'user', 'comment_count'));
-
     }
-
-
-
-
 }

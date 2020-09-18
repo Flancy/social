@@ -20,7 +20,6 @@
     <link href="{{ asset('plugins/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/select2/dist/css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('plugins/material-kit/assets/css/material-kit.css') }}" rel="stylesheet">
     <link href="{{ asset('css/around.css') }}" rel="stylesheet">
 
     @yield('header')
@@ -41,7 +40,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Знаки Зодиака
+                    <img src="{{ asset('images/blizneci-white.png') }}" alt="" class="logo-img" style="max-width: 67px;">
                 </a>
             </div>
 
@@ -56,7 +55,7 @@
                         <div class="input-group col-md-12">
                             <input type="text" class="form-control input-lg" name="s" placeholder="поиск..." />
                             <span class="input-group-btn">
-                                <button class="btn btn-info btn-lg" type="button">
+                                <button class="btn btn-info btn-lg" type="submit">
                                     <i class="glyphicon glyphicon-search"></i>
                                 </button>
                             </span>
@@ -67,6 +66,18 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a href="{{ url('/'.Auth::user()->username) }}" class="nav-link">Моя страница</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url('/') }}" class="nav-link">Стена</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url('/direct-messages') }}" class="nav-link">Сообщения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('followers') }}" class="nav-link">Друзья</a>
+                    </li>
                     @include('widgets.notifications')
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle parent" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -76,11 +87,6 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="{{ url('/'.Auth::user()->username) }}">
-                                    <i class="fa fa-user"></i> Мой профиль
-                                </a>
-                            </li>
                             <li>
                                 <a href="{{ url('/settings') }}">
                                     <i class="fa fa-cog"></i> Настройки

@@ -7,6 +7,8 @@ $(function() {
         language: 'ru'
     });
 
+    $('.datepicker').datepicker('update', new Date(2002, 1, 1));
+
     $('[data-toggle="tooltip"]').tooltip();
 
     $(".select2-multiple").select2();

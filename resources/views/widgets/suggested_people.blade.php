@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-9">
                     <a href="{{ url('/'.$user->username) }}">
-                        <span class="name">{{ $user->name }}</span><!--<small>{{ '@'.$user->username }}</small>--><br />
+                        <span class="name">{{ $user->name }}</span><br />
                     </a>
                     <div id="people-listed-{{ $user->id }}">
                         {!! sHelper::followButton($user->id, Auth::id(), '#people-listed-'.$user->id, 'btn-sm') !!}

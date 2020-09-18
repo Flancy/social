@@ -6,18 +6,7 @@ body {
 a, a:hover, a:active, a:visited, a:focus {
     text-decoration:none;
 }
-.btn.btn-info {
-    color: #fff;
-    background: #00bcd4;
-    border: #00bcd4;
-    box-shadow: 0 2px 2px 0 rgba(0,188,212,.14), 0 3px 1px -2px rgba(0,188,212,.2), 0 1px 5px 0 rgba(0,188,212,.12);
-}
-.btn.btn-info:hover {
-    color: #fff;
-    background: #00aec5;
-    border: #008697;
-    box-shadow: 0 14px 26px -12px rgba(0,188,212,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,188,212,.2);
-}
+
 .app {
     position:relative
 }
@@ -58,10 +47,17 @@ a, a:hover, a:active, a:visited, a:focus {
     margin: 0;
     padding: 0;
     width: 180px;
-    color: #fff;
-    padding-top: 19px;
 }
-
+.navbar-around .nav-item {
+    line-height: 60px;
+    height: 60px;
+}
+.navbar-around .nav-link {
+    padding: 0 10px;
+    line-height: 60px;
+    height: 60px;
+    color: #fff !important;
+}
 .navbar-around .navbar-form {
     width: auto;
     margin-left: 10px;
@@ -115,7 +111,6 @@ a, a:hover, a:active, a:visited, a:focus {
     color: #fff;
     padding: 5px 10px;
     box-sizing: border-box;
-    /*border-left: 1px solid #193e5e;*/
 }
 
 .navbar-around .navbar-nav li a.parent img{
@@ -248,14 +243,14 @@ a, a:hover, a:active, a:visited, a:focus {
     text-shadow: 1px 1px #000;
     text-align: center;
     display: block;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     margin-top: 35%;
 }
 
 .profile .cover .bar .profile-image .change-image .upload-button i{
     display: block;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .profile .cover .bar .profile-image .change-image .upload-button:hover {
@@ -348,7 +343,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .profile .profile-information .edit-button a {
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -357,7 +352,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .profile .profile-information .edit-button a:hover {
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: none;
 }
 
@@ -576,21 +571,23 @@ a, a:hover, a:active, a:visited, a:focus {
     background: #ececec;
     border-color: #d9d9d9
 }
-.btn {
-    background-image: none;
-}
+
 .new-post-box .btn-add-image:hover {
     background: #d9d9d9;
     border-color: #c8c8c8
 }
 
 .new-post-box .btn-submit {
+    background: #488ec9;
+    border-color: #3c76a7;
     padding-left: 20px;
     padding-right: 20px;
     color: #fff
 }
 
 .new-post-box .btn-submit:hover {
+    background: #3c76a7;
+    border-color: #2e5679;
 }
 
 .new-post-box .loading-post {
@@ -1481,7 +1478,53 @@ a, a:hover, a:active, a:visited, a:focus {
     font-size: 18px;
 }
 
+.list-group-zodiac .zodiac-ico {
+    max-width: 17px;
+}
+.list-group-zodiac span {
+    font-weight: bold;
+}
+.list-group-zodiac span.red {
+    font-weight: 400;
+    color: #CC0000;
+}
+.list-group-zodiac .list-group-item {
+    position: relative;
+}
+.list-group-zodiac .list-group-item:after {
+    content: " ";
+    display: table;
+    width: 100%;
+}
 
+.list-group-year .pull-left {
+    float: none !important;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+}
+.list-group-year .pull-right {
+    text-align: right;
+    float: none !important;
+    display: inline-block;
+    vertical-align: top;
+    width: 67%;
+    padding-left: 5px;
+}
+
+.profile .cover-profile {
+    position: relative;
+    margin-bottom: 30px;
+    height: 212px;
+    background: transparent;
+}
+.profile .cover-profile .loading-cover {
+    height: 212px;
+}
+.profile .cover-profile .bar .profile-image {
+    left: 50%;
+    margin-left: -100px;
+}
 @media only screen and (max-width: 1200px) {
     .profile .cover, .profile .cover .loading-cover{
         height: 300px;

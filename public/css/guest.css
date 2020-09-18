@@ -1,5 +1,4 @@
 body{
-    /*background: url('../images/guest_bg.jpg');*/
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -25,11 +24,23 @@ input:-webkit-autofill:active {
     text-align: center;
     width: 350px;
 }
-
+.logo-img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 120px;
+}
+.logo-text {
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 34px;
+}
 .tab_container {
     width: 100%;
     margin: 0 auto;
     position: relative;
+    box-shadow: 0 0 24px rgba(0,0,0,0.3)
 }
 
 
@@ -50,7 +61,7 @@ input:-webkit-autofill:active {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    background: #9c27b0;
+    background: rgba(59, 105, 145, 0.8);
 }
 
 .tab_container label{
@@ -75,7 +86,7 @@ input:-webkit-autofill:active {
 
 
 .tab_container [id^="tab"]:checked + .head, .tab_container .head:hover {
-    background: rgba(156, 39, 176, 0.8);
+    background: rgba(11, 75, 134, 0.8);
 }
 
 
@@ -134,7 +145,7 @@ input:-webkit-autofill:active {
 
 
 .banner{
-    background: rgba(156, 39, 176, 0.5);
+    background: rgba(59, 143, 145, 0.5);
     color: #fff;
     padding: 20px 10px;
     box-sizing: border-box;
@@ -332,6 +343,7 @@ input:-webkit-autofill:active {
     background-color: #5cb85c; }
 
 .btn-login{
+    background: #409aff;
     border: none;
     display: block;
     width: 100%;
@@ -449,6 +461,3 @@ input:-webkit-autofill:active {
         width: 100%;
     }
 }
-
-
-

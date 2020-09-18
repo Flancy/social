@@ -1,3 +1,29 @@
+<div class="cover cover-profile">
+    @if($my_profile)
+        <div class="loading-cover">
+            <img src="{{ asset('images/rolling.gif') }}" alt="">
+        </div>
+    @endif
+    <div class="bar">
+        <div class="profile-image @if($user->sex == 1){{ 'female' }}@endif">
+            @if($my_profile)
+                <div class="loading-image">
+                    <img src="{{ asset('images/rolling.gif') }}" alt="">
+                </div>
+                <form id="form-upload-profile-photo" enctype="multipart/form-data">
+                    <div class="change-image">
+                        <a href="javascript:;" class="upload-button" onclick="uploadProfilePhoto()"><i class="fa fa-upload"></i> Загрузить изображение</a>
+                        <input type="file" accept="image/*" name="profile-photo" class="profile_photo_input">
+                    </div>
+                </form>
+            @endif
+            <a data-fancybox="group" href="{{ $user->getPhoto() }}">
+                <img class="image-profile" src="{{ $user->getPhoto(200, 200) }}" alt="" />
+            </a>
+        </div>
+    </div>
+</div>
+
 <div class="profile-information">
     @if($my_profile)
         <div class="edit-button">
@@ -19,28 +45,28 @@
             {{ $user->getSex() }}
         </li>
         @if($user->has('location'))
-        <li class="list-group-item">
-            <i class="fa fa-map-marker"></i>
-            {{ $user->location->city->name }}
-        </li>
+            <li class="list-group-item">
+                <i class="fa fa-map-marker"></i>
+                {{ $user->location->city->name }}
+            </li>
         @endif
         @if ($user->phone)
-        <li class="list-group-item">
-            <i class="fa fa-mobile"></i>
-            {{ $user->getPhone() }}
-        </li>
+            <li class="list-group-item">
+                <i class="fa fa-mobile"></i>
+                {{ $user->getPhone() }}
+            </li>
         @endif
         @if ($user->birthday)
-        <li class="list-group-item">
-            <i class="fa fa-birthday-cake"></i>
-            {{ $user->birthday->format('d.m.Y') }} - {{ $user->getAge() }}
-        </li>
+            <li class="list-group-item">
+                <i class="fa fa-birthday-cake"></i>
+                {{ $user->birthday->format('d.m.Y') }} - {{ $user->getAge() }} лет
+            </li>
         @endif
         @if ($user->bio)
-        <li class="list-group-item">
-            <i class="fa fa-info-circle"></i>
-            {{ $user->bio }}
-        </li>
+            <li class="list-group-item">
+                <i class="fa fa-info-circle"></i>
+                {{ $user->bio }}
+            </li>
         @endif
     </ul>
 </div>

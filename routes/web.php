@@ -39,7 +39,7 @@ Route::post('/posts/comments/delete', 'PostsController@deleteComment');
 Route::get('/post/{id}', 'PostsController@single');
 
 // Search
-Route::get('/search', 'HomeController@search');
+Route::get('/search', 'HomeController@search')->name('search');
 
 
 // Groups
@@ -50,6 +50,7 @@ Route::get('/group/{id}/stats', 'GroupController@stats');
 
 // Follow
 Route::post('/follow', 'FollowController@follow');
+Route::get('/followers', 'FollowController@followers')->name('followers');
 Route::get('/followers/pending', 'FollowController@pending');
 Route::post('/follower/request', 'FollowController@followerRequest');
 Route::post('/follower/denied', 'FollowController@followDenied');

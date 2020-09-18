@@ -15,27 +15,36 @@
     <link href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('plugins/material-kit/assets/css/material-kit.css') }}" rel="stylesheet">
     <link href="{{ asset('css/guest.css') }}" rel="stylesheet">
+
+    <style>
+        .logo-img-guest {
+            position: fixed;
+            width: 400px;
+            height: auto;
+            left: 10%;
+            margin-top: -230px;
+            top: 50%;
+        }
+    </style>
 </head>
-<body>
+<body style="position: relative">
+
+<img src="{{ asset('images/blizneci.png') }}" alt="" class="logo-img-guest">
 
 <div class="banner">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                Знаки Зодиака
+                <p class="logo-text">Знаки Зодиака</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
+<div class="container" style="position: relative">
     <div class="row">
         <div class="col-md-6">
-            <!--<a href="{{ url('/') }}" class="logo">
-                Знаки Зодиака
-            </a>-->
         </div>
 
         <div class="col-md-6">
