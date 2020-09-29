@@ -66,7 +66,7 @@ Route::get('/nearby', 'NearbyController@index');
 
 // Messages
 Route::get('/direct-messages', 'MessagesController@index');
-Route::get('/direct-messages/show/{id}', 'MessagesController@index');
+Route::get('/direct-messages/show/{id}', 'MessagesController@index')->name('message.show');
 Route::post('/direct-messages/chat', 'MessagesController@chat');
 Route::post('/direct-messages/send', 'MessagesController@send');
 Route::post('/direct-messages/new-messages', 'MessagesController@newMessages');

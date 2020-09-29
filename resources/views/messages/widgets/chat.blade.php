@@ -17,7 +17,7 @@
     @php($first_message_id = 0)
     @if($message_list->count() == 0)
         <div class="alert alert-info">
-            No messages
+            Нет сообщений
         </div>
     @else
         @php($i=0)
@@ -39,7 +39,7 @@
     <form id="form-message-write">
         <input type="hidden" name="user_id" value="{{ $friend->id }}">
         @if ($can_send_message)
-            <textarea class="form-control" rows="1" placeholder="Your message.." onkeyup="sendMessage(event)"></textarea>
+            <textarea class="form-control" rows="1" placeholder="Ваше сообщение.." onkeyup="sendMessage(event)"></textarea>
         @else
             <div class="alert alert-danter">Вы больше не можете отправлять сообщения.</div>
         @endif

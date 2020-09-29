@@ -6,11 +6,15 @@ body {
 a, a:hover, a:active, a:visited, a:focus {
     text-decoration:none;
 }
-
+a {
+    color: #594a1d;
+}
 .app {
     position:relative
 }
-
+.modal {
+    overflow: auto;
+}
 .main-content {
     margin-top: 30px;
 }
@@ -204,8 +208,8 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .profile .cover .bar .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     bottom: 10px;
     left: 0;
     position: absolute;
@@ -396,7 +400,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .following-button:after {
-    content: 'Following'
+    content: 'Подписан'
 }
 
 .following-button:hover {
@@ -405,15 +409,15 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .following-button:hover:after {
-    content: 'Unfollow'
+    content: 'Отписаться'
 }
 
 .request-button:after {
-    content: 'Request Sent'
+    content: 'Запрос отправлен'
 }
 
 .request-button:hover:after {
-    content: 'Undo Request'
+    content: 'Отменить запрос'
 }
 
 /* Footer */
@@ -1205,7 +1209,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .dm .friends-list .friend.active {
-    background: #325f85;
+    background: #594a1d;
 }
 
 .dm .friends-list .friend.active strong, .dm .friends-list .friend.active span, .dm .friends-list .friend.active small {
@@ -1213,7 +1217,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .dm .friends-list .friend.active {
-    background: #325f85;
+    background: #594a1d;
 }
 
 .dm .friends-list .friend.active strong, .dm .friends-list .friend.active span, .dm .friends-list .friend.active small {
@@ -1310,7 +1314,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .dm .chat .message-list .message.message-right .text{
-    background: #6088a9;
+    background: #a68a37;
     color: #fff;
 }
 
@@ -1528,15 +1532,33 @@ a, a:hover, a:active, a:visited, a:focus {
 .profile .cover-profile {
     position: relative;
     margin-bottom: 30px;
-    height: 212px;
+    height: 275px;
     background: transparent;
 }
 .profile .cover-profile .loading-cover {
-    height: 212px;
+    height: 275px;
 }
 .profile .cover-profile .bar .profile-image {
     left: 50%;
-    margin-left: -100px;
+    margin-left: -50%;
+}
+
+.profile-information .profile-follow {
+    display: flex;
+}
+.profile-information .profile-follow .profile-follow-b1,
+.profile-information .profile-follow .profile-follow-b2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.panel-primary>.panel-heading {
+    background-image: none;
+    background-color: #a68a37;
+    border-color: #a68a37;
+}
+.panel-primary {
+    border-color: #a68a37;
 }
 @media only screen and (max-width: 1200px) {
     .profile .cover, .profile .cover .loading-cover{

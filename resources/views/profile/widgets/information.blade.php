@@ -24,7 +24,7 @@
     </div>
 </div>
 
-<div class="profile-information" style="margin-bottom: 30px;">
+<div class="profile-information" style="margin-bottom: 10px;">
     @if(!$my_profile)
         <div class="profile-follow">
             <div class="profile-follow-b1" style="margin-right: 10px">
@@ -32,6 +32,16 @@
             </div>
             <div class="profile-follow-b2">
                 {!! sHelper::deniedButton(Auth::id(), $user->id, '.denied-button-'.$user->id, 'denied-button-'.$user->id) !!}
+            </div>
+        </div>
+    @endif
+</div>
+
+<div class="profile-information" style="margin-bottom: 30px;">
+    @if(!$my_profile)
+        <div class="profile-follow">
+            <div class="profile-follow-b3" style="margin-right: 10px">
+                <a href="{{ route('message.show', $user->id) }}" class="btn btn-success">Написать сообщение</a>
             </div>
         </div>
     @endif
