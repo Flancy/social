@@ -9,6 +9,12 @@ $(function() {
 
     $('.datepicker').datepicker('update', new Date(2002, 1, 1));
 
+    $('.profile .profile-information .edit-button').click(function () {
+        var date = $('.input-group .form-control.datepicker').val();
+
+        $('.datepicker').datepicker('update', new Date(date));
+    });
+
     $('[data-toggle="tooltip"]').tooltip();
 
     $(".select2-multiple").select2();

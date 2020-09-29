@@ -71,7 +71,7 @@ class SettingsController extends Controller
                     $save = Auth::user()->save();
                 }else{
                     $save = false;
-                    $additional_msg = "Username can't contain special character and space";
+                    $additional_msg = "Не должно содержать спецсимволов!";
                 }
             }
         }else {
@@ -96,9 +96,9 @@ class SettingsController extends Controller
             }
         }
         if ($save){
-            $request->session()->flash('alert-success', 'Your settings have been successfully updated!');
+            $request->session()->flash('alert-success', 'Ваши настройки успешно сохранены!');
         }else{
-            $request->session()->flash('alert-danger', ($additional_msg)?$additional_msg:'There was a problem saving your settings!');
+            $request->session()->flash('alert-danger', ($additional_msg)?$additional_msg:' Проблемы с сохранением настроек!');
         }
 
         if ($request->input("type") == "password") {

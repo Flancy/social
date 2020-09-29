@@ -669,6 +669,7 @@ a {
 }
 
 .panel-post .info a.date {
+    display: none;
     color: #929292;
     font-style: italic;
     font-size: 12px;
