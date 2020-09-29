@@ -210,9 +210,7 @@ a {
 .profile .cover .bar .profile-image {
     width: 100%;
     height: auto;
-    bottom: 10px;
-    left: 0;
-    position: absolute;
+    position: relative;
     border: 5px solid #a68a37;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -259,10 +257,12 @@ a {
     color: #fff;
     text-shadow: 1px 1px #000;
     text-align: center;
-    display: block;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
     font-weight: bold;
-    margin-top: 35%;
 }
 
 .profile .cover .bar .profile-image .change-image .upload-button i{
@@ -1532,15 +1532,11 @@ a {
 .profile .cover-profile {
     position: relative;
     margin-bottom: 30px;
-    height: 275px;
+    height: auto;
     background: transparent;
 }
 .profile .cover-profile .loading-cover {
     height: 275px;
-}
-.profile .cover-profile .bar .profile-image {
-    left: 50%;
-    margin-left: -50%;
 }
 
 .profile-information .profile-follow {
@@ -1614,6 +1610,9 @@ a {
 
 
 @media only screen and (max-width: 992px) {
+    .profile .profile-main h3 {
+        margin-top: 0 !important;
+    }
     .profile .cover, .profile .cover .loading-cover {
         height: 250px;
     }

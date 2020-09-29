@@ -73,9 +73,9 @@ class User extends Authenticatable
         }else {
             $path = "images/profile-picture.png";
         }
-        if ($w == null && $h == null){
-            return url('/'.$path);
-        }
+
+        return url('/'.$path);
+
         $image = '/resizer.php?';
         if ($w > -1) $image .= '&w='.$w;
         if ($h > -1) $image .= '&h='.$h;
@@ -85,19 +85,19 @@ class User extends Authenticatable
     }
 
     public function getCover($w = null, $h = null){
-        if (!empty($this->cover_path)){
-            $path = 'storage/uploads/covers/'.$this->cover_path;
+        if (!empty($this->profile_path)){
+            $path = 'storage/uploads/profile_photos/'.$this->profile_path;
         }else {
-            return "";
+            $path = "images/profile-picture.png";
         }
-        if ($w == null && $h == null){
-            return url('/'.$path);
-        }
+
+        return url('/'.$path);
+
         $image = '/resizer.php?';
         if ($w > -1) $image .= '&w='.$w;
         if ($h > -1) $image .= '&h='.$h;
         $image .= '&zc=1';
-        $image .= '&src='.$path;
+        $image .= '&src=public/'.$path;
         return url($image);
     }
 
